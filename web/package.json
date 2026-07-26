@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "mujoco-js": "^0.0.7",
+    "onnxruntime-web": "^1.27.0",
+    "three": "^0.181.0"
+  },
+  "devDependencies": {
+    "playwright": "^1.62.0"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "env": "CartpoleBalance",
+  "seed": 0,
+  "num_timesteps_actual": 88473600,
+  "num_envs": 2048,
+  "episode_length": 1000,
+  "obs_dim": 5,
+  "action_dim": 1,
+  "activation": "swish",
+  "hidden_sizes": [
+    32,
+    32,
+    32,
+    32
+  ],
+  "final_reward": 998.76025390625,
+  "final_reward_std": 1.3308213949203491,
+  "extraction_max_abs_error": 2.6226043701171875e-06,
+  "note": "Provenance of the smoke fixture: the Tier 0 policy trained on this machine. Weights are the real trained ones, not a placeholder."
+}

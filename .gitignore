@@ -1,0 +1,51 @@
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Linting / type checking
+.ruff_cache/
+.pyright/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Trained weights live in the HuggingFace model repo, not in git.
+# results/ and plots/ are committed; only the checkpoints are not.
+artifacts/
+checkpoints/
+*.onnx
+*.msgpack
+*.pkl
+# The demo's exported policies are results the published numbers refer to.
+!web/assets/onnx/*.onnx
+
+# Browser dependencies: `npm install` then `web/tools/vendor.sh`.
+web/node_modules/
+web/vendor/
+
+# Assembled publish bundles.
+publish/
+
+# OS
+.DS_Store

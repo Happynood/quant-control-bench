@@ -1,0 +1,29 @@
+# Tier 1, headline results. num_envs=4096 measured to fit in 4 GB on this machine.
+name: tier1-go1
+env: Go1JoystickFlatTerrain
+schemes:
+  - fp32
+  - fp16
+  - int8-tensor
+  - int8-channel
+  - int4-channel
+  - int4-group32
+  - ternary
+  - mixed-head-fp16
+  - int8-act
+perturbations:
+  - push_impulse
+  - mass_scale
+  - friction_scale
+  - actuator_delay
+  - obs_noise
+train:
+  # Playground's tuned value. Measured to fit: 8192 parallel Go1 environments
+  # step in 667 MiB, well inside the 4 GB budget, so the VRAM protocol's
+  # halving path is not needed at the stepping stage. PPO adds the networks and
+  # optimizer state on top; halve to 4096 if that pushes it over.
+  num_envs: 8192
+  seed: 0
+eval:
+  episodes: 100
+  seeds: [0, 1, 2, 3, 4]

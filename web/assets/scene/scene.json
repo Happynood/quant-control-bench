@@ -1,0 +1,146 @@
+{
+  "env": "Go1JoystickFlatTerrain",
+  "top_xml": "scene_mjx_feetonly_flat_terrain.xml",
+  "files": [
+    "calf.stl",
+    "go1_mjx_feetonly.xml",
+    "hip.stl",
+    "scene_mjx_feetonly_flat_terrain.xml",
+    "sensor_feet.xml",
+    "thigh.stl",
+    "thigh_mirror.stl",
+    "trunk.stl"
+  ],
+  "total_bytes": 10331968,
+  "timestep": 0.004,
+  "ccd_iterations": 20,
+  "dof_damping": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.5
+  ],
+  "actuator_gainprm_col0": [
+    35.0,
+    35.0,
+    35.0,
+    35.0,
+    35.0,
+    35.0,
+    35.0,
+    35.0,
+    35.0,
+    35.0,
+    35.0,
+    35.0
+  ],
+  "actuator_biasprm_col1": [
+    -35.0,
+    -35.0,
+    -35.0,
+    -35.0,
+    -35.0,
+    -35.0,
+    -35.0,
+    -35.0,
+    -35.0,
+    -35.0,
+    -35.0,
+    -35.0
+  ],
+  "actuator_gainprm_stride": 10,
+  "actuator_biasprm_stride": 10,
+  "nq": 19,
+  "nv": 18,
+  "nu": 12,
+  "nbody": 14,
+  "sim_dt": 0.004,
+  "ctrl_dt": 0.02,
+  "n_substeps": 5,
+  "policy_interface": {
+    "obs_layout": [
+      [
+        "local_linvel",
+        3
+      ],
+      [
+        "gyro",
+        3
+      ],
+      [
+        "gravity",
+        3
+      ],
+      [
+        "joint_angles_minus_default",
+        12
+      ],
+      [
+        "joint_vel",
+        12
+      ],
+      [
+        "last_action",
+        12
+      ],
+      [
+        "command",
+        3
+      ]
+    ],
+    "sensors": {
+      "local_linvel": {
+        "adr": 3,
+        "dim": 3
+      },
+      "gyro": {
+        "adr": 0,
+        "dim": 3
+      }
+    },
+    "gravity_from": "imu_site_down_vector",
+    "imu_site_id": 1,
+    "default_pose": [
+      0.10000000149011612,
+      0.8999999761581421,
+      -1.7999999523162842,
+      -0.10000000149011612,
+      0.8999999761581421,
+      -1.7999999523162842,
+      0.10000000149011612,
+      0.8999999761581421,
+      -1.7999999523162842,
+      -0.10000000149011612,
+      0.8999999761581421,
+      -1.7999999523162842
+    ],
+    "action_scale": 0.5,
+    "qpos_joint_start": 7,
+    "qvel_joint_start": 6,
+    "noise": {
+      "level": 1.0,
+      "scales": {
+        "gravity": 0.05,
+        "gyro": 0.2,
+        "joint_pos": 0.03,
+        "joint_vel": 1.5,
+        "linvel": 0.1
+      },
+      "distribution": "uniform(-1, 1) * level * scale"
+    }
+  }
+}

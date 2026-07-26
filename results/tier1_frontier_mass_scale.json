@@ -1,0 +1,659 @@
+{
+  "env": "Go1JoystickFlatTerrain",
+  "baseline_policy": "artifacts/tier1-go1",
+  "reference_return": 31.492839813232422,
+  "episodes": 100,
+  "axes": [
+    "mass_scale"
+  ],
+  "frontiers": [
+    {
+      "scheme": "fp32",
+      "axis": "mass_scale",
+      "success_threshold": 15.746419906616211,
+      "reference_return": 31.492839813232422,
+      "p50": 2.810810810810811,
+      "censored": false,
+      "p50_ci": {
+        "estimate": 2.810810810810811,
+        "ci_low": 2.75,
+        "ci_high": 2.8906321022727273,
+        "confidence": 0.95
+      },
+      "points": [
+        {
+          "magnitude": 1.0,
+          "success_rate": 1.0,
+          "mean_return": 31.492839813232422,
+          "failure_rate": 0.0,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 1.5,
+          "success_rate": 1.0,
+          "mean_return": 30.57036590576172,
+          "failure_rate": 0.0,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 2.0,
+          "success_rate": 1.0,
+          "mean_return": 28.617815017700195,
+          "failure_rate": 0.0,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 2.3,
+          "success_rate": 0.97,
+          "mean_return": 26.320995330810547,
+          "failure_rate": 0.03,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 2.6,
+          "success_rate": 0.76,
+          "mean_return": 21.20608139038086,
+          "failure_rate": 0.24,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 2.9,
+          "success_rate": 0.39,
+          "mean_return": 13.376364707946777,
+          "failure_rate": 0.6,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 3.2,
+          "success_rate": 0.18,
+          "mean_return": 8.061031341552734,
+          "failure_rate": 0.81,
+          "nonfinite_fraction": 0.0
+        }
+      ]
+    },
+    {
+      "scheme": "fp16",
+      "axis": "mass_scale",
+      "success_threshold": 15.746419906616211,
+      "reference_return": 31.492839813232422,
+      "p50": 2.7736842105263158,
+      "censored": false,
+      "p50_ci": {
+        "estimate": 2.7736842105263158,
+        "ci_low": 2.714,
+        "ci_high": 2.84,
+        "confidence": 0.95
+      },
+      "points": [
+        {
+          "magnitude": 1.0,
+          "success_rate": 1.0,
+          "mean_return": 31.490880966186523,
+          "failure_rate": 0.0,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 1.5,
+          "success_rate": 1.0,
+          "mean_return": 30.572589874267578,
+          "failure_rate": 0.0,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 2.0,
+          "success_rate": 0.98,
+          "mean_return": 28.279294967651367,
+          "failure_rate": 0.02,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 2.3,
+          "success_rate": 0.95,
+          "mean_return": 25.899185180664062,
+          "failure_rate": 0.05,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 2.6,
+          "success_rate": 0.72,
+          "mean_return": 20.23978614807129,
+          "failure_rate": 0.28,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 2.9,
+          "success_rate": 0.34,
+          "mean_return": 12.58517837524414,
+          "failure_rate": 0.65,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 3.2,
+          "success_rate": 0.19,
+          "mean_return": 7.60301399230957,
+          "failure_rate": 0.81,
+          "nonfinite_fraction": 0.0
+        }
+      ]
+    },
+    {
+      "scheme": "int8-tensor",
+      "axis": "mass_scale",
+      "success_threshold": 15.746419906616211,
+      "reference_return": 31.492839813232422,
+      "p50": 2.853125,
+      "censored": false,
+      "p50_ci": {
+        "estimate": 2.853125,
+        "ci_low": 2.78,
+        "ci_high": 2.9394736842105265,
+        "confidence": 0.95
+      },
+      "points": [
+        {
+          "magnitude": 1.0,
+          "success_rate": 1.0,
+          "mean_return": 31.490989685058594,
+          "failure_rate": 0.0,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 1.5,
+          "success_rate": 1.0,
+          "mean_return": 30.567853927612305,
+          "failure_rate": 0.0,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 2.0,
+          "success_rate": 0.98,
+          "mean_return": 28.48932647705078,
+          "failure_rate": 0.02,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 2.3,
+          "success_rate": 0.93,
+          "mean_return": 25.830053329467773,
+          "failure_rate": 0.07,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 2.6,
+          "success_rate": 0.77,
+          "mean_return": 21.084270477294922,
+          "failure_rate": 0.23,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 2.9,
+          "success_rate": 0.45,
+          "mean_return": 14.602469444274902,
+          "failure_rate": 0.54,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 3.2,
+          "success_rate": 0.16,
+          "mean_return": 7.576803684234619,
+          "failure_rate": 0.83,
+          "nonfinite_fraction": 0.0
+        }
+      ]
+    },
+    {
+      "scheme": "int8-channel",
+      "axis": "mass_scale",
+      "success_threshold": 15.746419906616211,
+      "reference_return": 31.492839813232422,
+      "p50": 2.805263157894737,
+      "censored": false,
+      "p50_ci": {
+        "estimate": 2.805263157894737,
+        "ci_low": 2.746341463414634,
+        "ci_high": 2.8756837837837836,
+        "confidence": 0.95
+      },
+      "points": [
+        {
+          "magnitude": 1.0,
+          "success_rate": 1.0,
+          "mean_return": 31.46405792236328,
+          "failure_rate": 0.0,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 1.5,
+          "success_rate": 1.0,
+          "mean_return": 30.538972854614258,
+          "failure_rate": 0.0,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 2.0,
+          "success_rate": 0.96,
+          "mean_return": 27.784252166748047,
+          "failure_rate": 0.04,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 2.3,
+          "success_rate": 0.92,
+          "mean_return": 25.305051803588867,
+          "failure_rate": 0.08,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 2.6,
+          "success_rate": 0.76,
+          "mean_return": 21.441856384277344,
+          "failure_rate": 0.24,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 2.9,
+          "success_rate": 0.38,
+          "mean_return": 13.1267671585083,
+          "failure_rate": 0.62,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 3.2,
+          "success_rate": 0.2,
+          "mean_return": 8.137158393859863,
+          "failure_rate": 0.8,
+          "nonfinite_fraction": 0.0
+        }
+      ]
+    },
+    {
+      "scheme": "int4-channel",
+      "axis": "mass_scale",
+      "success_threshold": 15.746419906616211,
+      "reference_return": 31.492839813232422,
+      "p50": 2.675,
+      "censored": false,
+      "p50_ci": {
+        "estimate": 2.675,
+        "ci_low": 2.5775,
+        "ci_high": 2.764516129032258,
+        "confidence": 0.95
+      },
+      "points": [
+        {
+          "magnitude": 1.0,
+          "success_rate": 0.99,
+          "mean_return": 30.738466262817383,
+          "failure_rate": 0.01,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 1.5,
+          "success_rate": 0.99,
+          "mean_return": 29.530363082885742,
+          "failure_rate": 0.01,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 2.0,
+          "success_rate": 0.92,
+          "mean_return": 25.813642501831055,
+          "failure_rate": 0.08,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 2.3,
+          "success_rate": 0.87,
+          "mean_return": 23.356342315673828,
+          "failure_rate": 0.13,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 2.6,
+          "success_rate": 0.57,
+          "mean_return": 16.852407455444336,
+          "failure_rate": 0.43,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 2.9,
+          "success_rate": 0.29,
+          "mean_return": 10.328740119934082,
+          "failure_rate": 0.7,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 3.2,
+          "success_rate": 0.16,
+          "mean_return": 6.3843770027160645,
+          "failure_rate": 0.83,
+          "nonfinite_fraction": 0.0
+        }
+      ]
+    },
+    {
+      "scheme": "int4-group32",
+      "axis": "mass_scale",
+      "success_threshold": 15.746419906616211,
+      "reference_return": 31.492839813232422,
+      "p50": 2.776923076923077,
+      "censored": false,
+      "p50_ci": {
+        "estimate": 2.776923076923077,
+        "ci_low": 2.72,
+        "ci_high": 2.842331081081081,
+        "confidence": 0.95
+      },
+      "points": [
+        {
+          "magnitude": 1.0,
+          "success_rate": 1.0,
+          "mean_return": 31.229446411132812,
+          "failure_rate": 0.0,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 1.5,
+          "success_rate": 1.0,
+          "mean_return": 30.215625762939453,
+          "failure_rate": 0.0,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 2.0,
+          "success_rate": 0.97,
+          "mean_return": 27.775917053222656,
+          "failure_rate": 0.03,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 2.3,
+          "success_rate": 0.93,
+          "mean_return": 25.096181869506836,
+          "failure_rate": 0.07,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 2.6,
+          "success_rate": 0.73,
+          "mean_return": 19.82340431213379,
+          "failure_rate": 0.27,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 2.9,
+          "success_rate": 0.34,
+          "mean_return": 12.30981731414795,
+          "failure_rate": 0.65,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 3.2,
+          "success_rate": 0.13,
+          "mean_return": 6.553350925445557,
+          "failure_rate": 0.87,
+          "nonfinite_fraction": 0.0
+        }
+      ]
+    },
+    {
+      "scheme": "ternary",
+      "axis": "mass_scale",
+      "success_threshold": 15.746419906616211,
+      "reference_return": 31.492839813232422,
+      "p50": 1.0,
+      "censored": false,
+      "p50_ci": {
+        "estimate": 1.0,
+        "ci_low": 1.0,
+        "ci_high": 1.0,
+        "confidence": 0.95
+      },
+      "points": [
+        {
+          "magnitude": 1.0,
+          "success_rate": 0.04,
+          "mean_return": 3.7490367889404297,
+          "failure_rate": 0.95,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 1.5,
+          "success_rate": 0.03,
+          "mean_return": 2.8794686794281006,
+          "failure_rate": 0.97,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 2.0,
+          "success_rate": 0.0,
+          "mean_return": 1.3594001531600952,
+          "failure_rate": 0.99,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 2.3,
+          "success_rate": 0.0,
+          "mean_return": 1.0369598865509033,
+          "failure_rate": 0.99,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 2.6,
+          "success_rate": 0.0,
+          "mean_return": 0.7051559686660767,
+          "failure_rate": 1.0,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 2.9,
+          "success_rate": 0.0,
+          "mean_return": 0.5263688564300537,
+          "failure_rate": 1.0,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 3.2,
+          "success_rate": 0.0,
+          "mean_return": 0.46757784485816956,
+          "failure_rate": 1.0,
+          "nonfinite_fraction": 0.0
+        }
+      ]
+    },
+    {
+      "scheme": "mixed-head-fp16",
+      "axis": "mass_scale",
+      "success_threshold": 15.746419906616211,
+      "reference_return": 31.492839813232422,
+      "p50": 2.72,
+      "censored": false,
+      "p50_ci": {
+        "estimate": 2.72,
+        "ci_low": 2.6454545454545455,
+        "ci_high": 2.7866874999999998,
+        "confidence": 0.95
+      },
+      "points": [
+        {
+          "magnitude": 1.0,
+          "success_rate": 1.0,
+          "mean_return": 31.234821319580078,
+          "failure_rate": 0.0,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 1.5,
+          "success_rate": 1.0,
+          "mean_return": 30.156339645385742,
+          "failure_rate": 0.0,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 2.0,
+          "success_rate": 0.96,
+          "mean_return": 26.985483169555664,
+          "failure_rate": 0.04,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 2.3,
+          "success_rate": 0.9,
+          "mean_return": 24.055740356445312,
+          "failure_rate": 0.1,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 2.6,
+          "success_rate": 0.64,
+          "mean_return": 18.266399383544922,
+          "failure_rate": 0.35,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 2.9,
+          "success_rate": 0.29,
+          "mean_return": 10.564730644226074,
+          "failure_rate": 0.7,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 3.2,
+          "success_rate": 0.1,
+          "mean_return": 5.7728962898254395,
+          "failure_rate": 0.89,
+          "nonfinite_fraction": 0.0
+        }
+      ]
+    },
+    {
+      "scheme": "int8-act",
+      "axis": "mass_scale",
+      "success_threshold": 15.746419906616211,
+      "reference_return": 31.492839813232422,
+      "p50": 2.805263157894737,
+      "censored": false,
+      "p50_ci": {
+        "estimate": 2.805263157894737,
+        "ci_low": 2.746341463414634,
+        "ci_high": 2.8785714285714286,
+        "confidence": 0.95
+      },
+      "points": [
+        {
+          "magnitude": 1.0,
+          "success_rate": 1.0,
+          "mean_return": 31.467243194580078,
+          "failure_rate": 0.0,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 1.5,
+          "success_rate": 1.0,
+          "mean_return": 30.523160934448242,
+          "failure_rate": 0.0,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 2.0,
+          "success_rate": 0.99,
+          "mean_return": 28.43134307861328,
+          "failure_rate": 0.01,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 2.3,
+          "success_rate": 0.96,
+          "mean_return": 26.264909744262695,
+          "failure_rate": 0.04,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 2.6,
+          "success_rate": 0.76,
+          "mean_return": 21.528200149536133,
+          "failure_rate": 0.24,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 2.9,
+          "success_rate": 0.38,
+          "mean_return": 13.00136947631836,
+          "failure_rate": 0.61,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 3.2,
+          "success_rate": 0.18,
+          "mean_return": 7.722135543823242,
+          "failure_rate": 0.81,
+          "nonfinite_fraction": 0.0
+        }
+      ]
+    }
+  ],
+  "manifest": {
+    "timestamp": "2026-07-26T09:10:57.688767+00:00",
+    "git_commit": "92404453f02abab598e35ca1d1bc7f316725b65d",
+    "git_dirty": true,
+    "config_sha256": "06dde383c9cf810ff5a2d458984c571959d4342751aa5f91180d00cf5bc83a27",
+    "config_path": "configs/tier1_go1.yaml",
+    "name": "tier1-go1",
+    "env": "Go1JoystickFlatTerrain",
+    "schemes": [
+      "fp32",
+      "fp16",
+      "int8-tensor",
+      "int8-channel",
+      "int4-channel",
+      "int4-group32",
+      "ternary",
+      "mixed-head-fp16",
+      "int8-act"
+    ],
+    "perturbations": [
+      "push_impulse",
+      "mass_scale",
+      "friction_scale",
+      "actuator_delay",
+      "obs_noise"
+    ],
+    "num_envs": 8192,
+    "mjx_impl": "jax",
+    "deterministic_ops": true,
+    "train_seed": 0,
+    "eval_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "eval_episodes": 100,
+    "package_versions": {
+      "jax": "0.9.2",
+      "jaxlib": "0.9.2",
+      "mujoco": "3.10.0",
+      "mujoco_playground": "unknown",
+      "brax": "0.14.2",
+      "onnx": "1.22.0",
+      "onnxruntime": "1.27.0",
+      "numpy": "2.5.1"
+    },
+    "python_version": "3.12.13 (main, May 10 2026, 19:30:01) [Clang 22.1.3 ]",
+    "platform_info": "Linux-7.0.0-28-generic-x86_64-with-glibc2.43",
+    "cpu_model": "11th Gen Intel(R) Core(TM) i5-11400H @ 2.70GHz",
+    "cpu_count": 12,
+    "gpu": {
+      "name": null,
+      "driver_version": null,
+      "cuda_version": null,
+      "vram_total_mb": null,
+      "jax_devices": [
+        "cuda:0"
+      ],
+      "jax_default_backend": "gpu"
+    }
+  }
+}

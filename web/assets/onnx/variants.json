@@ -1,0 +1,81 @@
+{
+  "env": "Go1JoystickFlatTerrain",
+  "obs_dim": 48,
+  "action_dim": 12,
+  "obs_key": "state",
+  "parity_gate": 0.0001,
+  "variants": {
+    "fp32": {
+      "file": "policy_fp32.onnx",
+      "bytes": 771265,
+      "bits_per_weight": 32.0,
+      "onnx_parity_visited_states": 5.811452865600586e-07,
+      "onnx_parity_gaussian": 2.8908252716064453e-06,
+      "quantizes_activations": false
+    },
+    "fp16": {
+      "file": "policy_fp16.onnx",
+      "bytes": 771265,
+      "bits_per_weight": 16.0,
+      "onnx_parity_visited_states": 5.736947059631348e-07,
+      "onnx_parity_gaussian": 2.9206275939941406e-06,
+      "quantizes_activations": false
+    },
+    "int8-tensor": {
+      "file": "policy_int8-tensor.onnx",
+      "bytes": 771265,
+      "bits_per_weight": 8.0,
+      "onnx_parity_visited_states": 6.034970283508301e-07,
+      "onnx_parity_gaussian": 2.7418136596679688e-06,
+      "quantizes_activations": false
+    },
+    "int8-channel": {
+      "file": "policy_int8-channel.onnx",
+      "bytes": 771265,
+      "bits_per_weight": 8.0,
+      "onnx_parity_visited_states": 6.556510925292969e-07,
+      "onnx_parity_gaussian": 4.462897777557373e-06,
+      "quantizes_activations": false
+    },
+    "int4-channel": {
+      "file": "policy_int4-channel.onnx",
+      "bytes": 771265,
+      "bits_per_weight": 4.0,
+      "onnx_parity_visited_states": 5.960464477539062e-07,
+      "onnx_parity_gaussian": 4.015862941741943e-06,
+      "quantizes_activations": false
+    },
+    "int4-group32": {
+      "file": "policy_int4-group32.onnx",
+      "bytes": 771265,
+      "bits_per_weight": 4.0,
+      "onnx_parity_visited_states": 5.960464477539062e-07,
+      "onnx_parity_gaussian": 2.5779008865356445e-06,
+      "quantizes_activations": false
+    },
+    "ternary": {
+      "file": "policy_ternary.onnx",
+      "bytes": 771265,
+      "bits_per_weight": 1.584962500721156,
+      "onnx_parity_visited_states": 3.2782554626464844e-07,
+      "onnx_parity_gaussian": 2.2510066628456116e-06,
+      "quantizes_activations": false
+    },
+    "mixed-head-fp16": {
+      "file": "policy_mixed-head-fp16.onnx",
+      "bytes": 771265,
+      "bits_per_weight": 4.192513368983957,
+      "onnx_parity_visited_states": 6.556510925292969e-07,
+      "onnx_parity_gaussian": 4.708766937255859e-06,
+      "quantizes_activations": false
+    },
+    "int8-act": {
+      "file": "policy_int8-act.onnx",
+      "bytes": 772321,
+      "bits_per_weight": 8.0,
+      "onnx_parity_visited_states": 1.7881393432617188e-07,
+      "onnx_parity_gaussian": 0.004153430461883545,
+      "quantizes_activations": true
+    }
+  }
+}

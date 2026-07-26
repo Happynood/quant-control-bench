@@ -1,0 +1,659 @@
+{
+  "env": "Go1JoystickFlatTerrain",
+  "baseline_policy": "artifacts/tier1-go1",
+  "reference_return": 31.492839813232422,
+  "episodes": 100,
+  "axes": [
+    "push_impulse"
+  ],
+  "frontiers": [
+    {
+      "scheme": "fp32",
+      "axis": "push_impulse",
+      "success_threshold": 15.746419906616211,
+      "reference_return": 31.492839813232422,
+      "p50": 13.1,
+      "censored": false,
+      "p50_ci": {
+        "estimate": 13.1,
+        "ci_low": 11.8,
+        "ci_high": 14.615384615384617,
+        "confidence": 0.95
+      },
+      "points": [
+        {
+          "magnitude": 0.0,
+          "success_rate": 1.0,
+          "mean_return": 31.492839813232422,
+          "failure_rate": 0.0,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 2.0,
+          "success_rate": 1.0,
+          "mean_return": 31.42870330810547,
+          "failure_rate": 0.0,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 5.0,
+          "success_rate": 0.99,
+          "mean_return": 31.078920364379883,
+          "failure_rate": 0.01,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 8.0,
+          "success_rate": 0.88,
+          "mean_return": 28.954177856445312,
+          "failure_rate": 0.12,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 11.0,
+          "success_rate": 0.64,
+          "mean_return": 25.505861282348633,
+          "failure_rate": 0.36,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 14.0,
+          "success_rate": 0.44,
+          "mean_return": 22.99032974243164,
+          "failure_rate": 0.56,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 18.0,
+          "success_rate": 0.23,
+          "mean_return": 19.636293411254883,
+          "failure_rate": 0.77,
+          "nonfinite_fraction": 0.0
+        }
+      ]
+    },
+    {
+      "scheme": "fp16",
+      "axis": "push_impulse",
+      "success_threshold": 15.746419906616211,
+      "reference_return": 31.492839813232422,
+      "p50": 12.875,
+      "censored": false,
+      "p50_ci": {
+        "estimate": 12.875,
+        "ci_low": 10.727114164904862,
+        "ci_high": 14.96,
+        "confidence": 0.95
+      },
+      "points": [
+        {
+          "magnitude": 0.0,
+          "success_rate": 1.0,
+          "mean_return": 31.490880966186523,
+          "failure_rate": 0.0,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 2.0,
+          "success_rate": 1.0,
+          "mean_return": 31.425546646118164,
+          "failure_rate": 0.0,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 5.0,
+          "success_rate": 1.0,
+          "mean_return": 31.217397689819336,
+          "failure_rate": 0.0,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 8.0,
+          "success_rate": 0.93,
+          "mean_return": 29.763530731201172,
+          "failure_rate": 0.07,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 11.0,
+          "success_rate": 0.55,
+          "mean_return": 24.364696502685547,
+          "failure_rate": 0.45,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 14.0,
+          "success_rate": 0.47,
+          "mean_return": 22.826091766357422,
+          "failure_rate": 0.53,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 18.0,
+          "success_rate": 0.23,
+          "mean_return": 19.26969337463379,
+          "failure_rate": 0.77,
+          "nonfinite_fraction": 0.0
+        }
+      ]
+    },
+    {
+      "scheme": "int8-tensor",
+      "axis": "push_impulse",
+      "success_threshold": 15.746419906616211,
+      "reference_return": 31.492839813232422,
+      "p50": 12.75,
+      "censored": false,
+      "p50_ci": {
+        "estimate": 12.75,
+        "ci_low": 11.681818181818182,
+        "ci_high": 14.0,
+        "confidence": 0.95
+      },
+      "points": [
+        {
+          "magnitude": 0.0,
+          "success_rate": 1.0,
+          "mean_return": 31.490989685058594,
+          "failure_rate": 0.0,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 2.0,
+          "success_rate": 1.0,
+          "mean_return": 31.418046951293945,
+          "failure_rate": 0.0,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 5.0,
+          "success_rate": 1.0,
+          "mean_return": 31.2213077545166,
+          "failure_rate": 0.0,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 8.0,
+          "success_rate": 0.9,
+          "mean_return": 29.348432540893555,
+          "failure_rate": 0.1,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 11.0,
+          "success_rate": 0.64,
+          "mean_return": 25.282978057861328,
+          "failure_rate": 0.36,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 14.0,
+          "success_rate": 0.4,
+          "mean_return": 21.808237075805664,
+          "failure_rate": 0.6,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 18.0,
+          "success_rate": 0.24,
+          "mean_return": 19.726259231567383,
+          "failure_rate": 0.76,
+          "nonfinite_fraction": 0.0
+        }
+      ]
+    },
+    {
+      "scheme": "int8-channel",
+      "axis": "push_impulse",
+      "success_threshold": 15.746419906616211,
+      "reference_return": 31.492839813232422,
+      "p50": 12.909090909090908,
+      "censored": false,
+      "p50_ci": {
+        "estimate": 12.909090909090908,
+        "ci_low": 11.666666666666668,
+        "ci_high": 14.413974591651542,
+        "confidence": 0.95
+      },
+      "points": [
+        {
+          "magnitude": 0.0,
+          "success_rate": 1.0,
+          "mean_return": 31.46405792236328,
+          "failure_rate": 0.0,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 2.0,
+          "success_rate": 1.0,
+          "mean_return": 31.409339904785156,
+          "failure_rate": 0.0,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 5.0,
+          "success_rate": 0.99,
+          "mean_return": 31.035900115966797,
+          "failure_rate": 0.01,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 8.0,
+          "success_rate": 0.9,
+          "mean_return": 29.5498104095459,
+          "failure_rate": 0.1,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 11.0,
+          "success_rate": 0.64,
+          "mean_return": 25.295448303222656,
+          "failure_rate": 0.36,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 14.0,
+          "success_rate": 0.42,
+          "mean_return": 21.9112548828125,
+          "failure_rate": 0.58,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 18.0,
+          "success_rate": 0.26,
+          "mean_return": 19.70465660095215,
+          "failure_rate": 0.74,
+          "nonfinite_fraction": 0.0
+        }
+      ]
+    },
+    {
+      "scheme": "int4-channel",
+      "axis": "push_impulse",
+      "success_threshold": 15.746419906616211,
+      "reference_return": 31.492839813232422,
+      "p50": 12.263157894736842,
+      "censored": false,
+      "p50_ci": {
+        "estimate": 12.263157894736842,
+        "ci_low": 10.84188596491228,
+        "ci_high": 13.785714285714285,
+        "confidence": 0.95
+      },
+      "points": [
+        {
+          "magnitude": 0.0,
+          "success_rate": 0.99,
+          "mean_return": 30.738466262817383,
+          "failure_rate": 0.01,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 2.0,
+          "success_rate": 1.0,
+          "mean_return": 30.671283721923828,
+          "failure_rate": 0.0,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 5.0,
+          "success_rate": 0.99,
+          "mean_return": 30.474014282226562,
+          "failure_rate": 0.01,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 8.0,
+          "success_rate": 0.84,
+          "mean_return": 27.864013671875,
+          "failure_rate": 0.16,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 11.0,
+          "success_rate": 0.58,
+          "mean_return": 24.173269271850586,
+          "failure_rate": 0.42,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 14.0,
+          "success_rate": 0.39,
+          "mean_return": 21.82278060913086,
+          "failure_rate": 0.61,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 18.0,
+          "success_rate": 0.22,
+          "mean_return": 18.8264217376709,
+          "failure_rate": 0.78,
+          "nonfinite_fraction": 0.0
+        }
+      ]
+    },
+    {
+      "scheme": "int4-group32",
+      "axis": "push_impulse",
+      "success_threshold": 15.746419906616211,
+      "reference_return": 31.492839813232422,
+      "p50": 12.875,
+      "censored": false,
+      "p50_ci": {
+        "estimate": 12.875,
+        "ci_low": 11.781793478260871,
+        "ci_high": 14.2,
+        "confidence": 0.95
+      },
+      "points": [
+        {
+          "magnitude": 0.0,
+          "success_rate": 1.0,
+          "mean_return": 31.229446411132812,
+          "failure_rate": 0.0,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 2.0,
+          "success_rate": 0.99,
+          "mean_return": 31.023897171020508,
+          "failure_rate": 0.01,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 5.0,
+          "success_rate": 0.98,
+          "mean_return": 30.700334548950195,
+          "failure_rate": 0.02,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 8.0,
+          "success_rate": 0.79,
+          "mean_return": 27.147424697875977,
+          "failure_rate": 0.21,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 11.0,
+          "success_rate": 0.65,
+          "mean_return": 25.25307846069336,
+          "failure_rate": 0.35,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 14.0,
+          "success_rate": 0.41,
+          "mean_return": 21.739938735961914,
+          "failure_rate": 0.59,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 18.0,
+          "success_rate": 0.27,
+          "mean_return": 19.97512435913086,
+          "failure_rate": 0.73,
+          "nonfinite_fraction": 0.0
+        }
+      ]
+    },
+    {
+      "scheme": "ternary",
+      "axis": "push_impulse",
+      "success_threshold": 15.746419906616211,
+      "reference_return": 31.492839813232422,
+      "p50": 0.0,
+      "censored": false,
+      "p50_ci": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95
+      },
+      "points": [
+        {
+          "magnitude": 0.0,
+          "success_rate": 0.04,
+          "mean_return": 3.7490367889404297,
+          "failure_rate": 0.95,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 2.0,
+          "success_rate": 0.04,
+          "mean_return": 3.722499370574951,
+          "failure_rate": 0.95,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 5.0,
+          "success_rate": 0.02,
+          "mean_return": 2.7077548503875732,
+          "failure_rate": 0.97,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 8.0,
+          "success_rate": 0.0,
+          "mean_return": 2.5247368812561035,
+          "failure_rate": 1.0,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 11.0,
+          "success_rate": 0.0,
+          "mean_return": 2.336538076400757,
+          "failure_rate": 1.0,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 14.0,
+          "success_rate": 0.0,
+          "mean_return": 2.245319128036499,
+          "failure_rate": 1.0,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 18.0,
+          "success_rate": 0.0,
+          "mean_return": 2.239973545074463,
+          "failure_rate": 1.0,
+          "nonfinite_fraction": 0.0
+        }
+      ]
+    },
+    {
+      "scheme": "mixed-head-fp16",
+      "axis": "push_impulse",
+      "success_threshold": 15.746419906616211,
+      "reference_return": 31.492839813232422,
+      "p50": 12.615384615384615,
+      "censored": false,
+      "p50_ci": {
+        "estimate": 12.615384615384615,
+        "ci_low": 10.76923076923077,
+        "ci_high": 14.8,
+        "confidence": 0.95
+      },
+      "points": [
+        {
+          "magnitude": 0.0,
+          "success_rate": 1.0,
+          "mean_return": 31.234821319580078,
+          "failure_rate": 0.0,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 2.0,
+          "success_rate": 1.0,
+          "mean_return": 31.184181213378906,
+          "failure_rate": 0.0,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 5.0,
+          "success_rate": 0.99,
+          "mean_return": 30.955551147460938,
+          "failure_rate": 0.01,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 8.0,
+          "success_rate": 0.87,
+          "mean_return": 29.00863265991211,
+          "failure_rate": 0.13,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 11.0,
+          "success_rate": 0.57,
+          "mean_return": 24.142343521118164,
+          "failure_rate": 0.43,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 14.0,
+          "success_rate": 0.44,
+          "mean_return": 22.27300262451172,
+          "failure_rate": 0.56,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 18.0,
+          "success_rate": 0.28,
+          "mean_return": 20.01753807067871,
+          "failure_rate": 0.72,
+          "nonfinite_fraction": 0.0
+        }
+      ]
+    },
+    {
+      "scheme": "int8-act",
+      "axis": "push_impulse",
+      "success_threshold": 15.746419906616211,
+      "reference_return": 31.492839813232422,
+      "p50": 13.428571428571429,
+      "censored": false,
+      "p50_ci": {
+        "estimate": 13.428571428571429,
+        "ci_low": 12.235294117647058,
+        "ci_high": 15.25032894736842,
+        "confidence": 0.95
+      },
+      "points": [
+        {
+          "magnitude": 0.0,
+          "success_rate": 1.0,
+          "mean_return": 31.467243194580078,
+          "failure_rate": 0.0,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 2.0,
+          "success_rate": 1.0,
+          "mean_return": 31.398399353027344,
+          "failure_rate": 0.0,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 5.0,
+          "success_rate": 0.99,
+          "mean_return": 31.182106018066406,
+          "failure_rate": 0.01,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 8.0,
+          "success_rate": 0.89,
+          "mean_return": 29.549331665039062,
+          "failure_rate": 0.11,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 11.0,
+          "success_rate": 0.67,
+          "mean_return": 25.848491668701172,
+          "failure_rate": 0.33,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 14.0,
+          "success_rate": 0.46,
+          "mean_return": 23.118370056152344,
+          "failure_rate": 0.54,
+          "nonfinite_fraction": 0.0
+        },
+        {
+          "magnitude": 18.0,
+          "success_rate": 0.31,
+          "mean_return": 20.5992374420166,
+          "failure_rate": 0.69,
+          "nonfinite_fraction": 0.0
+        }
+      ]
+    }
+  ],
+  "manifest": {
+    "timestamp": "2026-07-26T08:20:40.195368+00:00",
+    "git_commit": "92404453f02abab598e35ca1d1bc7f316725b65d",
+    "git_dirty": true,
+    "config_sha256": "06dde383c9cf810ff5a2d458984c571959d4342751aa5f91180d00cf5bc83a27",
+    "config_path": "configs/tier1_go1.yaml",
+    "name": "tier1-go1",
+    "env": "Go1JoystickFlatTerrain",
+    "schemes": [
+      "fp32",
+      "fp16",
+      "int8-tensor",
+      "int8-channel",
+      "int4-channel",
+      "int4-group32",
+      "ternary",
+      "mixed-head-fp16",
+      "int8-act"
+    ],
+    "perturbations": [
+      "push_impulse",
+      "mass_scale",
+      "friction_scale",
+      "actuator_delay",
+      "obs_noise"
+    ],
+    "num_envs": 8192,
+    "mjx_impl": "jax",
+    "deterministic_ops": true,
+    "train_seed": 0,
+    "eval_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "eval_episodes": 100,
+    "package_versions": {
+      "jax": "0.9.2",
+      "jaxlib": "0.9.2",
+      "mujoco": "3.10.0",
+      "mujoco_playground": "unknown",
+      "brax": "0.14.2",
+      "onnx": "1.22.0",
+      "onnxruntime": "1.27.0",
+      "numpy": "2.5.1"
+    },
+    "python_version": "3.12.13 (main, May 10 2026, 19:30:01) [Clang 22.1.3 ]",
+    "platform_info": "Linux-7.0.0-28-generic-x86_64-with-glibc2.43",
+    "cpu_model": "11th Gen Intel(R) Core(TM) i5-11400H @ 2.70GHz",
+    "cpu_count": 12,
+    "gpu": {
+      "name": null,
+      "driver_version": null,
+      "cuda_version": null,
+      "vram_total_mb": null,
+      "jax_devices": [
+        "cuda:0"
+      ],
+      "jax_default_backend": "gpu"
+    }
+  }
+}

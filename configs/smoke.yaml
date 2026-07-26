@@ -1,0 +1,12 @@
+# Tier 0 smoke config. Used by `make verify`; must finish in well under a minute.
+name: smoke
+env: CartpoleBalance
+schemes:
+  - fp32
+perturbations: []
+train:
+  num_envs: 64
+  seed: 0
+eval:
+  episodes: 4
+  seeds: [0, 1, 2, 3, 4]

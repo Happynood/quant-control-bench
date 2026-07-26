@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>quant-control-bench — how few bits before it falls over?</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>How few bits does a closed-loop robot controller need before it falls over?</h1>
+      <p class="lede">
+        The same trained Go1 policy, quantized several ways, walking in real MuJoCo
+        physics compiled to WebAssembly. Everything on this page runs in your browser:
+        the simulation, the neural network, and the timing.
+      </p>
+    </header>
+
+    <section class="panel">
+      <h2>Variants</h2>
+      <div id="schemes" class="schemes"></div>
+      <p class="note">
+        All ONNX files are the same size. Quantization here is <em>simulated</em> —
+        weights are rounded to the target grid and stored back as float32 — because the
+        question is what precision does to control, not what it does to a file. A
+        deployment would pack the weights and get the storage win too.
+      </p>
+    </section>
+
+    <section class="panel">
+      <h2>Command and perturbations</h2>
+      <div class="controls">
+        <label>forward velocity <output id="vx-v">1.00 m/s</output>
+          <input type="range" id="vx" min="-1" max="1.5" step="0.05" value="1" /></label>
+        <label>turn rate <output id="wz-v">0.00 rad/s</output>
+          <input type="range" id="wz" min="-1.5" max="1.5" step="0.05" value="0" /></label>
+        <label>torso mass <output id="mass-v">1.00x</output>
+          <input type="range" id="mass" min="1" max="3.2" step="0.05" value="1" /></label>
+        <label>ground friction <output id="friction-v">1.00x</output>
+          <input type="range" id="friction" min="0.06" max="1.5" step="0.02" value="1" /></label>
+        <label>actuator delay <output id="delay-v">0 step(s)</output>
+          <input type="range" id="delay" min="0" max="4" step="1" value="0" /></label>
+        <label>observation noise &sigma; <output id="noise-v">0.000</output>
+          <input type="range" id="noise" min="0" max="0.3" step="0.005" value="0" /></label>
+        <label>push impulse (N·s)
+          <input type="range" id="push" min="0" max="18" step="0.5" value="8" /></label>
+      </div>
+      <div class="buttons">
+        <button id="play">play</button>
+        <button id="push-btn">push all</button>
+        <button id="reset">reset to shared state</button>
+        <label class="inline"><input type="checkbox" id="freeze" checked /> freeze fallen robots</label>
+        <span id="fps" class="badge">— fps</span>
+      </div>
+      <p id="status" class="status">starting…</p>
+    </section>
+
+    <div id="grid" class="grid"></div>
+
+    <section class="panel">
+      <h2>Measured results</h2>
+      <p class="note">
+        From runs that completed on the reference machine (RTX 3050 Laptop, 4 GB):
+        100 episodes × 5 seeds, deterministic policy, paired bootstrap 95% intervals.
+        Nothing on this page is estimated.
+      </p>
+      <div class="tables">
+        <table>
+          <caption>Cost of precision on flat terrain</caption>
+          <thead><tr><th>scheme</th><th>bits/weight</th><th>&Delta;return vs fp32</th></tr></thead>
+          <tbody>
+            <tr><td>fp32</td><td>32.00</td><td>—</td></tr>
+            <tr><td>fp16</td><td>16.00</td><td>no measurable loss</td></tr>
+            <tr><td>int8-tensor</td><td>8.00</td><td>no measurable loss</td></tr>
+            <tr><td>int8-channel</td><td>8.00</td><td>no measurable loss</td></tr>
+            <tr><td>int8-act</td><td>8.00</td><td>no measurable loss</td></tr>
+            <tr><td>int4-group32</td><td>4.00</td><td>&minus;0.73% [&minus;0.88, &minus;0.45]</td></tr>
+            <tr><td>mixed-head-fp16</td><td>4.19</td><td>&minus;0.90% [&minus;1.26, &minus;0.70]</td></tr>
+            <tr><td>int4-channel</td><td>4.00</td><td>&minus;2.34% [&minus;2.79, &minus;1.95]</td></tr>
+            <tr><td>ternary</td><td>1.58</td><td>&minus;90.7% [&minus;92.1, &minus;89.1]</td></tr>
+          </tbody>
+        </table>
+        <table>
+          <caption>Robustness frontier (P50) — where 50% of episodes still succeed</caption>
+          <thead><tr><th>scheme</th><th>friction ×<br /><small>lower is better</small></th><th>obs noise &sigma;<br /><small>higher is better</small></th></tr></thead>
+          <tbody>
+            <tr><td>fp32</td><td>0.189 [0.178, 0.206]</td><td>0.142 [0.138, 0.145]</td></tr>
+            <tr><td>int8-channel</td><td>0.205 [0.188, 0.224]</td><td>0.142 [0.138, 0.146]</td></tr>
+            <tr><td>int4-group32</td><td>0.207 [0.190, 0.225]</td><td>0.140 [0.135, 0.144]</td></tr>
+            <tr><td><strong>int4-channel</strong></td><td><strong>0.241 [0.230, 0.252]</strong></td><td><strong>0.127 [0.122, 0.134]</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">
+        <strong>int4-channel</strong> costs only 2.3% of return on flat ground, yet its
+        friction and observation-noise frontiers separate from fp32 with
+        non-overlapping intervals. <strong>int4-group32</strong>, at the same 4 bits,
+        does not. Finer grouping, not more bits, is what buys the margin back.
+      </p>
+      <p class="note">
+        The recommender's answer on this data: at a 90% retention bar, the cheapest
+        qualifying scheme is <code>int4-group32</code> at 4.00 bits; raising the bar to
+        99% moves it to <code>int8-act</code> at 8.00 bits.
+      </p>
+    </section>
+
+    <section class="panel">
+      <h2>Browser inference latency</h2>
+      <p class="note">
+        100 warmup iterations discarded, then 1000 timed. Measured here, in this
+        browser, on this machine — a latency measured in Python would not describe
+        what this page does.
+      </p>
+      <button id="bench">measure latency for the selected variants</button>
+      <pre id="latency" class="latency">not measured yet</pre>
+    </section>
+
+    <footer>
+      <p>
+        <a href="https://github.com/Happynood/quant-control-bench">source and full methodology</a>
+        · MIT · physics by MuJoCo (Apache-2.0) compiled to WebAssembly
+      </p>
+    </footer>
+
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>

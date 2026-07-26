@@ -1,0 +1,43 @@
+cff-version: 1.2.0
+message: "If you use quant-control-bench in your research, please cite it as below."
+type: software
+title: "quant-control-bench: How Few Bits Does a Closed-Loop Robot Controller Need?"
+authors:
+  - family-names: "Happynood"
+    given-names: "Alex"
+version: 0.1.0
+date-released: "2026-07-25"
+repository-code: "https://github.com/Happynood/quant-control-bench"
+license: MIT
+keywords:
+  - quantization
+  - reinforcement-learning
+  - robotics
+  - control
+  - mujoco
+  - sim-to-real
+abstract: >
+  quant-control-bench measures how post-training quantization degrades
+  closed-loop robot control policies, on a 4GB consumer GPU. Unlike language
+  models, where quantization error is applied once per token, a controller
+  recycles its error through the plant at every timestep, so a bounded per-step
+  action error can produce unbounded trajectory divergence. The benchmark
+  reports a feedback amplification factor (relative return drop divided by
+  relative open-loop action error), a divergence horizon, and a robustness
+  frontier under external pushes, mass and friction shift, actuator delay and
+  observation noise, all with bootstrap confidence intervals from real MuJoCo
+  runs. It ships a precision recommender that returns the cheapest scheme
+  meeting a target robustness level and browser latency budget.
+references:
+  - type: software
+    title: "QuantThink: Does Quantization Break Reasoning?"
+    authors:
+      - family-names: "Happynood"
+        given-names: "Alex"
+    repository-code: "https://github.com/Happynood/quant-reasoning-bench"
+  - type: software
+    title: "QuantCall: Benchmarking Tool-Calling Reliability Under Quantization"
+    authors:
+      - family-names: "Happynood"
+        given-names: "Alex"
+    repository-code: "https://github.com/Happynood/quant-toolcall-bench"

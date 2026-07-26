@@ -1,0 +1,139 @@
+{
+  "environment": {
+    "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/148.0.0.0 Safari/537.36",
+    "hardware_concurrency": 12,
+    "wasm_threads": 1,
+    "platform": "Linux x86_64"
+  },
+  "measurements": [
+    {
+      "scheme": "fp32",
+      "iterations": 1000,
+      "warmup": 100,
+      "block_size": 50,
+      "blocks": 20,
+      "mean_ms": 0.052500000000000005,
+      "block_median_ms": 0.05199999988079071,
+      "block_p95_ms": 0.07200000017881393,
+      "block_min_ms": 0.04,
+      "block_max_ms": 0.07200000017881393,
+      "timer_resolution_note": "per-call latency is below the browser timer resolution; figures are block totals divided by block size, and the spread is across blocks"
+    },
+    {
+      "scheme": "fp16",
+      "iterations": 1000,
+      "warmup": 100,
+      "block_size": 50,
+      "blocks": 20,
+      "mean_ms": 0.04059999999403954,
+      "block_median_ms": 0.04,
+      "block_p95_ms": 0.044000000059604645,
+      "block_min_ms": 0.03599999994039536,
+      "block_max_ms": 0.044000000059604645,
+      "timer_resolution_note": "per-call latency is below the browser timer resolution; figures are block totals divided by block size, and the spread is across blocks"
+    },
+    {
+      "scheme": "int8-tensor",
+      "iterations": 1000,
+      "warmup": 100,
+      "block_size": 50,
+      "blocks": 20,
+      "mean_ms": 0.0356000000089407,
+      "block_median_ms": 0.03599999994039536,
+      "block_p95_ms": 0.03800000011920929,
+      "block_min_ms": 0.03399999976158142,
+      "block_max_ms": 0.03800000011920929,
+      "timer_resolution_note": "per-call latency is below the browser timer resolution; figures are block totals divided by block size, and the spread is across blocks"
+    },
+    {
+      "scheme": "int8-channel",
+      "iterations": 1000,
+      "warmup": 100,
+      "block_size": 50,
+      "blocks": 20,
+      "mean_ms": 0.0371000000089407,
+      "block_median_ms": 0.03799999982118606,
+      "block_p95_ms": 0.04,
+      "block_min_ms": 0.03400000005960464,
+      "block_max_ms": 0.04,
+      "timer_resolution_note": "per-call latency is below the browser timer resolution; figures are block totals divided by block size, and the spread is across blocks"
+    },
+    {
+      "scheme": "int4-channel",
+      "iterations": 1000,
+      "warmup": 100,
+      "block_size": 50,
+      "blocks": 20,
+      "mean_ms": 0.04250000000000001,
+      "block_median_ms": 0.03599999994039536,
+      "block_p95_ms": 0.09400000005960464,
+      "block_min_ms": 0.03399999976158142,
+      "block_max_ms": 0.09400000005960464,
+      "timer_resolution_note": "per-call latency is below the browser timer resolution; figures are block totals divided by block size, and the spread is across blocks"
+    },
+    {
+      "scheme": "int4-group32",
+      "iterations": 1000,
+      "warmup": 100,
+      "block_size": 50,
+      "blocks": 20,
+      "mean_ms": 0.03390000000596047,
+      "block_median_ms": 0.03400000005960464,
+      "block_p95_ms": 0.03599999994039536,
+      "block_min_ms": 0.03199999988079071,
+      "block_max_ms": 0.03599999994039536,
+      "timer_resolution_note": "per-call latency is below the browser timer resolution; figures are block totals divided by block size, and the spread is across blocks"
+    },
+    {
+      "scheme": "ternary",
+      "iterations": 1000,
+      "warmup": 100,
+      "block_size": 50,
+      "blocks": 20,
+      "mean_ms": 0.033300000011920926,
+      "block_median_ms": 0.03399999976158142,
+      "block_p95_ms": 0.03599999994039536,
+      "block_min_ms": 0.03199999988079071,
+      "block_max_ms": 0.03599999994039536,
+      "timer_resolution_note": "per-call latency is below the browser timer resolution; figures are block totals divided by block size, and the spread is across blocks"
+    },
+    {
+      "scheme": "mixed-head-fp16",
+      "iterations": 1000,
+      "warmup": 100,
+      "block_size": 50,
+      "blocks": 20,
+      "mean_ms": 0.03359999999403954,
+      "block_median_ms": 0.03400000005960464,
+      "block_p95_ms": 0.03800000011920929,
+      "block_min_ms": 0.03199999988079071,
+      "block_max_ms": 0.03800000011920929,
+      "timer_resolution_note": "per-call latency is below the browser timer resolution; figures are block totals divided by block size, and the spread is across blocks"
+    },
+    {
+      "scheme": "int8-act",
+      "iterations": 1000,
+      "warmup": 100,
+      "block_size": 50,
+      "blocks": 20,
+      "mean_ms": 0.044500000000000005,
+      "block_median_ms": 0.04199999988079071,
+      "block_p95_ms": 0.06599999994039535,
+      "block_min_ms": 0.03800000011920929,
+      "block_max_ms": 0.06599999994039535,
+      "timer_resolution_note": "per-call latency is below the browser timer resolution; figures are block totals divided by block size, and the spread is across blocks"
+    }
+  ],
+  "ms_per_step": {
+    "fp32": 0.052500000000000005,
+    "fp16": 0.04059999999403954,
+    "int8-tensor": 0.0356000000089407,
+    "int8-channel": 0.0371000000089407,
+    "int4-channel": 0.04250000000000001,
+    "int4-group32": 0.03390000000596047,
+    "ternary": 0.033300000011920926,
+    "mixed-head-fp16": 0.03359999999403954,
+    "int8-act": 0.044500000000000005
+  },
+  "note": "Per-step means from block timing. Differences between schemes (~0.02 ms) are not resolvable against the block-to-block spread, and would not be expected to be: quantization here is simulated, so every ONNX graph stores float32 weights and has the same shape. A packed-integer kernel would be a different measurement."
+}

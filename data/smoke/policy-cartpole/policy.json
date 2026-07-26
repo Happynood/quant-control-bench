@@ -1,0 +1,14 @@
+{
+  "env": "CartpoleBalance",
+  "obs_dim": 5,
+  "action_dim": 1,
+  "activation": "swish",
+  "obs_key": null,
+  "hidden_sizes": [
+    32,
+    32,
+    32,
+    32
+  ],
+  "num_layers": 5
+}
